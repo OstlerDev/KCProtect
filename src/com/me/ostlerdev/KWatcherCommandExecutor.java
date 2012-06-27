@@ -7,8 +7,7 @@ import org.bukkit.command.CommandSender;
 public class KWatcherCommandExecutor implements CommandExecutor {
 
 	@Override
-	public boolean onCommand(CommandSender arg0, Command arg1, String arg2,
-			String[] arg3) {
+	public boolean onCommand(CommandSender cs, Command command, String commandStr, String[] args) {
 		// TODO Auto-generated method stub
 		return false;
 	}
