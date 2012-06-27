@@ -6,6 +6,7 @@ import listeners.BlockBreakListener;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import utilities.Config;
 import utilities.CreateUtilities;
 
 /**
@@ -23,8 +24,8 @@ public class KWatcher extends JavaPlugin {
 	public void onEnable() {
 		super.onEnable();
 		logger = getLogger();
-		logger.info("KWatcher has been enabled!");
 		new CreateUtilities();
+		new Config(this);
 		KWatcherCommandExecutor executor = new KWatcherCommandExecutor();
 		// TODO insert all commands.
 		getCommand("").setExecutor(executor);
@@ -35,7 +36,6 @@ public class KWatcher extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		super.onDisable();
-		logger.info("KWatcher has been disabled!");
 	}
 
 }
