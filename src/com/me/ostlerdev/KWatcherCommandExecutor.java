@@ -1,4 +1,4 @@
-package com.me.olisterdev;
+package com.me.ostlerdev;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
