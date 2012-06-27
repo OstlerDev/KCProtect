@@ -30,7 +30,7 @@ public class KWatcher extends JavaPlugin {
 		new Config(this);
 		KWatcherCommandExecutor executor = new KWatcherCommandExecutor();
 		// TODO insert all commands.
-		getCommand("").setExecutor(executor);
+		getCommand("kcprotect").setExecutor(executor);
 		// TODO insert the rest of the listeners.
 		getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
 		getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
