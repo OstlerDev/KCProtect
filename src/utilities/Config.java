@@ -19,6 +19,14 @@ public class Config {
 	}
 
 	public boolean LoadConfig(){
+		/**
+		 * 
+		 * TODO:
+		 * Decide what plot sizes we are going to use and what blocks default
+		 * then add an option to the config
+		 * 
+		 */
+		p.getConfig().addDefault("Utilities.VerboseMode", true);
 		p.getConfig().options().copyDefaults(true);
 	    p.saveConfig();
 		return false;

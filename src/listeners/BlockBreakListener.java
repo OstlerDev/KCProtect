@@ -13,6 +13,7 @@ public class BlockBreakListener implements Listener {
 	@EventHandler
 	public void onBlockBreak(BlockBreakEvent e) {
 		// TODO check to see if block is breakable.
+		@SuppressWarnings("unused")
 		Player player = e.getPlayer();
 	}
 }

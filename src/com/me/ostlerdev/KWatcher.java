@@ -14,6 +14,7 @@ import utilities.CreateUtilities;
  */
 public class KWatcher extends JavaPlugin {
 
+	@SuppressWarnings("unused")
 	private Logger logger;
 
 	public KWatcher() {
