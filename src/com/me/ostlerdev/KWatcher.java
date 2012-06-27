@@ -3,6 +3,7 @@ package com.me.ostlerdev;
 import java.util.logging.Logger;
 
 import listeners.BlockBreakListener;
+import listeners.BlockPlaceListener;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -32,6 +33,7 @@ public class KWatcher extends JavaPlugin {
 		getCommand("").setExecutor(executor);
 		// TODO insert the rest of the listeners.
 		getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
+		getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
 	}
 
 	@Override
