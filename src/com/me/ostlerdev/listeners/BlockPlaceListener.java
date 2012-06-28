@@ -5,8 +5,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 
-import com.me.olsterdev.utilities.CreateUtilities;
 import com.me.ostlerdev.KCProtect;
+import com.me.ostlerdev.utilities.CreateUtilities;
 
 
 /**

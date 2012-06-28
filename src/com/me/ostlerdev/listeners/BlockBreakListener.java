@@ -23,8 +23,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 
 
-import com.me.olsterdev.utilities.RemoveUtilities;
 import com.me.ostlerdev.KCProtect;
+import com.me.ostlerdev.utilities.RemoveUtilities;
 
 /**
  * @author DarkGhoul45
