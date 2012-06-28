@@ -54,7 +54,9 @@ public class BlockBreakListener implements Listener {
 
 	 private boolean checkLocation(Player player, Location blockLocation) {
 	 	File[] files = new File("plugins/KCProtect/Areas/").listFiles();
-	 	if(files.length == 0) {return true};
+	 	if(files.length == 0) {
+	 		return true;
+	 	}
 		 Map<String, Location> map = new HashMap<String, Location>();
 		 List<String> data = new ArrayList<String>();
 		 for(World w : plugin.getServer().getWorlds()) {
