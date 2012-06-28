@@ -7,7 +7,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 
 import com.me.ostlerdev.KCProtect;
 
-import utilities.CreateArea;
+import utilities.CreateUtilities;
 
 /**
  * @author OstlerDev
@@ -15,16 +15,16 @@ import utilities.CreateArea;
 public class BlockPlaceListener implements Listener {
 
 	private KCProtect plugin;
-	
+
 	public BlockPlaceListener(KCProtect plugin) {
 		this.plugin = plugin;
 	}
 	@EventHandler
 	public void onBlockPlace(BlockPlaceEvent e) {
 		Player player = e.getPlayer();
-		
+
 		if (e.getBlock().getTypeId() == 19){
-			new CreateArea(player, e.getBlock().getLocation());
+			new CreateUtilities(player, e.getBlock().getLocation()).start();
 			plugin.getLogger().info("[KCProtect] Creating new Area at " + e.getBlock().getLocation().toString());
 		}
 	}

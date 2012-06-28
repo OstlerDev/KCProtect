@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 /**
+ * @author OlisterDev
  * @author DarkGhoul45
  */
 public class KCProtectCommandExecutor implements CommandExecutor {

@@ -26,9 +26,17 @@ public class CreateUtilities extends Thread {
 				file.mkdirs();
 			}
 		}
+		// TODO Make this a useful file.
+		File config = new File("plugins/KCProtect/config.txt");
+		if(!config.exists()) {
+			try {
+				config.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
-	// TODO Call this from the BlockPlaceListener.class
 	public CreateUtilities(Player player, Location location) {
 		super();
 		this.player = player;
