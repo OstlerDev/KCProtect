@@ -31,6 +31,11 @@ public class CreateUtilities extends Thread {
 		if(!config.exists()) {
 			try {
 				config.createNewFile();
+				FileWriter fstream = new FileWriter(config);
+				BufferedWriter writer = new BufferedWriter(fstream);
+				writer.write("valueX=10\n" + "valueZ=10\n");
+				fstream.close();
+				writer.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
