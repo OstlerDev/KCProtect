@@ -1,4 +1,4 @@
-package listeners;
+package com.me.ostlerdev.listeners;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -21,8 +22,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 
-import utilities.RemoveUtilities;
 
+import com.me.olsterdev.utilities.RemoveUtilities;
 import com.me.ostlerdev.KCProtect;
 
 /**
@@ -99,6 +100,10 @@ public class BlockBreakListener implements Listener {
 	 *  This method will check to see if player is in the zone
 	 */
 	public boolean goodBoundaries(double playerX, double playerY, int x, int z) {
+		Player[] players = Bukkit.getServer().getOnlinePlayers();
+		for(Player player : players) {
+
+		}
 		return false;
 	}
 

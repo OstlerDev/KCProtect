@@ -1,4 +1,4 @@
-package utilities;
+package com.me.olsterdev.utilities;
 
 import java.io.File;
 

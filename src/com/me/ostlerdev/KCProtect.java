@@ -2,12 +2,13 @@ package com.me.ostlerdev;
 
 import java.util.logging.Logger;
 
-import listeners.BlockBreakListener;
-import listeners.BlockPlaceListener;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import utilities.CreateUtilities;
+import com.me.olsterdev.utilities.CreateUtilities;
+import com.me.ostlerdev.listeners.BlockBreakListener;
+import com.me.ostlerdev.listeners.BlockPlaceListener;
+
 
 /**
  * @author DarkGhoul45
