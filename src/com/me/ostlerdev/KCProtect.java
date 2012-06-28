@@ -26,7 +26,7 @@ public class KCProtect extends JavaPlugin {
 	public void onEnable() {
 		super.onEnable();
 		logger = getLogger();
-		logger.info("KWatcher has been enabled!");
+		logger.info("KCProtect has been enabled!");
 		new CreateUtilities();
 		new Config(this);
 		KCProtectCommandExecutor executor = new KCProtectCommandExecutor();
@@ -40,7 +40,7 @@ public class KCProtect extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		super.onDisable();
-		logger.info("KWatcher has been disabled!");
+		logger.info("KCProtect has been disabled!");
 	}
 
 }
