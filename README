@@ -1,1 +1,10 @@
-I'll work on the create area later, but you'll have to work on the yml file, config file, and BlockPlaceListener class. If you need a reference on how to check areas, look at my BlockBreakListener class. I will make it look a lot neater sooner or later.
+KCProtect
+=============
+
+ToDo
+----
+Finish Config
+Region Checking (BlockBreak and BlockPlace)
+
+Done
+----
