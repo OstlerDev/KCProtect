@@ -1,1 +1,1 @@
-I know, that is just from eclipse, I can remove it if you want. Also could you work on the createarea util?
+I'll work on the create area later, but you'll have to work on the yml file, config file, and BlockPlaceListener class. If you need a reference on how to check areas, look at my BlockBreakListener class. I will make it look a lot neater sooner or later.
