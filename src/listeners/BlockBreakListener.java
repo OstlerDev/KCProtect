@@ -60,7 +60,7 @@ public class BlockBreakListener implements Listener {
 				currentWorld = w;
 			 }
 		 }
-		 File[] files = new File("plugins/KWatcher/Areas/").listFiles();
+		 File[] files = new File("plugins/KCProtect/Areas/").listFiles();
 		 for(File file : files) {
 			 String ownerName = file.getName().split("Area")[0];
 			 try {

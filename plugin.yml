@@ -1,0 +1,7 @@
+name: KCProtect
+main: com.me.ostlerdev.KCProtect
+version: 0.1a
+author: OstlerDev
+
+commands:
+  kc:

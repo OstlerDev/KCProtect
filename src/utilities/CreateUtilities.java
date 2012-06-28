@@ -18,8 +18,8 @@ public class CreateUtilities extends Thread {
 
 	public CreateUtilities() {
 		File[] directories = {
-				new File("plugins/KWatcher/Areas/"),
-				new File("plugins/KWatcher/Logs/")
+				new File("plugins/KCProtect/Areas/"),
+				new File("plugins/KCProtect/Logs/")
 		};
 		for(File file : directories) {
 			if(!file.exists()) {
@@ -38,7 +38,7 @@ public class CreateUtilities extends Thread {
 	@Override
 	public void run() {
 		super.run();
-		File file = new File("plugins/KWatcher/Areas/" + player.getName() + "Area.txt");
+		File file = new File("plugins/KCProtect/Areas/" + player.getName() + "Area.txt");
 		if(!file.exists()) {
 			try {
 				file.createNewFile();

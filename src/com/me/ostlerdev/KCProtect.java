@@ -26,7 +26,6 @@ public class KCProtect extends JavaPlugin {
 	public void onEnable() {
 		super.onEnable();
 		logger = getLogger();
-		logger.info("KCProtect has been enabled!");
 		new CreateUtilities();
 		new Config(this);
 		KCProtectCommandExecutor executor = new KCProtectCommandExecutor();
@@ -35,6 +34,7 @@ public class KCProtect extends JavaPlugin {
 		// TODO add the rest of the listeners. (if any)
 		getServer().getPluginManager().registerEvents(new BlockBreakListener(this), this);
 		getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
+		logger.info("KCProtect has been enabled!");
 	}
 
 	@Override
