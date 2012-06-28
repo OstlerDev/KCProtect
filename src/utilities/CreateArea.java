@@ -1,6 +1,7 @@
 package utilities;
 
-import org.bukkit.util.Vector;
+import org.bukkit.Location;
+import org.bukkit.entity.Player;
 /**
  *
  * @author OstlerDev
@@ -8,7 +9,7 @@ import org.bukkit.util.Vector;
  */
 public class CreateArea {
 
-	public CreateArea(Vector xz1, Vector xz2) {
+	public CreateArea(Player p, Location blockLocation) {
 		/**
 		 *
 		 *  TODO: Generate a yml file for the region I suggest it looks something like, but we can make it whatever
@@ -23,5 +24,4 @@ public class CreateArea {
 		 *
 		 */
 	}
-
 }

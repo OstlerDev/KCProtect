@@ -7,7 +7,6 @@ import listeners.BlockPlaceListener;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import utilities.Config;
 import utilities.CreateUtilities;
 
 /**
@@ -27,13 +26,13 @@ public class KCProtect extends JavaPlugin {
 		super.onEnable();
 		logger = getLogger();
 		new CreateUtilities();
-		new Config(this);
+		//new Config(this);
 		KCProtectCommandExecutor executor = new KCProtectCommandExecutor();
 		// TODO add the rest of the commands.
 		getCommand("kc").setExecutor(executor);
 		// TODO add the rest of the listeners. (if any)
 		getServer().getPluginManager().registerEvents(new BlockBreakListener(this), this);
-		getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
+		getServer().getPluginManager().registerEvents(new BlockPlaceListener(this), this);
 		logger.info("KCProtect has been enabled!");
 	}
 

@@ -33,8 +33,8 @@ public class Config {
 		
 		File configFile = new File(Bukkit.getServer().getPluginManager().getPlugin("KCProtect").getDataFolder(), "config.yml");
         if (configFile.exists()) {
-        	p.getConfig().addDefault("Utilities.VerboseMode", true);
-    		p.getConfig().options().copyDefaults(true);
+        	//p.getConfig().addDefault("Utilities.VerboseMode", true);
+        	//p.saveDefaultConfig();
     	    p.saveConfig();
     	    return true;
         } else

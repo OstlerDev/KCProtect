@@ -5,15 +5,27 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 
+import com.me.ostlerdev.KCProtect;
+
+import utilities.CreateArea;
+
 /**
  * @author OstlerDev
  */
 public class BlockPlaceListener implements Listener {
 
+	private KCProtect plugin;
+	
+	public BlockPlaceListener(KCProtect plugin) {
+		this.plugin = plugin;
+	}
 	@EventHandler
 	public void onBlockPlace(BlockPlaceEvent e) {
-		// TODO Check to see if block is correct type to create a region around it... ex. player places sponge (configurable in the config) it creates a 25x25 region around him.
-		@SuppressWarnings("unused")
 		Player player = e.getPlayer();
+		
+		if (e.getBlock().getTypeId() == 19){
+			new CreateArea(player, e.getBlock().getLocation());
+			plugin.getLogger().info("[KCProtect] Creating new Area at " + e.getBlock().getLocation().toString());
+		}
 	}
 }
