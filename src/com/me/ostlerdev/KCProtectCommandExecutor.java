@@ -9,7 +9,6 @@ import org.bukkit.command.CommandSender;
  */
 public class KCProtectCommandExecutor implements CommandExecutor {
 
-	// TODO Implement this
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(command.getName().equals("kc")) {
