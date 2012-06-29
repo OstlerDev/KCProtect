@@ -148,20 +148,17 @@ public class AreaUtil {
 		return false;
 	}
 	
-	public boolean CheckOverlap(Player player, Location max, Location min){
-		double x = max.getBlockX()-10;
-    	double z = max.getBlockZ()-10;
-    	
-    	for (int a = 0; a <10; a++){
-        
-    		for (int i = max.getBlockX()-10; i < max.getBlockX()+10; i++)
+	public boolean CheckOverlap(Player player, Location max, Location min){	
+    	for (int a = min.getBlockZ(); a < max.getBlockZ(); a++){
+    		for (int b = min.getBlockX(); b < max.getBlockX(); b++)
     		{
-    			Location blockLocation = new Location(currentWorld, i, 64, z);
-    			if (!checkLocation(player, blockLocation)) return false;
+    			Location blockLocation = new Location(currentWorld, b, 64, a);
+    			if (!checkLocation(player, blockLocation)){
+    				player.sendMessage("You cannot create a Area here! It overlaps with someone elses!");
+    				return true;
+    			}
     		}
-    		z++;
     	}
-    	x++;
-		return true;
+		return false;
 	}
 }

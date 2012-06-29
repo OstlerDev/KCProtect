@@ -27,9 +27,10 @@ public class BlockPlaceListener implements Listener {
 
 		if (e.getBlock().getTypeId() == 19){
 			AreaUtil util = new AreaUtil(plugin);
-			if (util.CheckOverlap(player, new Location(player.getWorld(), e.getBlock().getX()-10, 64,  e.getBlock().getX()-10), new Location(player.getWorld(), e.getBlock().getX()+10, 64,  e.getBlock().getX()+10))){
+			if (!util.CheckOverlap(player, new Location(player.getWorld(), e.getBlock().getX()-10, 64,  e.getBlock().getX()-10), new Location(player.getWorld(), e.getBlock().getX()+10, 64,  e.getBlock().getX()+10))){
 				new CreateUtilities(player, e.getBlock().getLocation()).start();
-				plugin.getLogger().info("[KCProtect] Creating new Area at " + e.getBlock().getLocation().toString());
+				plugin.getLogger().info("Creating new Area at " + e.getBlock().getLocation().toString());
+				player.sendMessage("Area succesfully created at " + e.getBlock().getX() +","+ e.getBlock().getZ());
 			}
 		}
 	}
