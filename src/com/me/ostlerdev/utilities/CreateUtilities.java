@@ -34,8 +34,8 @@ public class CreateUtilities extends Thread {
 				FileWriter fstream = new FileWriter(config);
 				BufferedWriter writer = new BufferedWriter(fstream);
 				writer.write("valueX=10\n" + "valueZ=10\n");
-				fstream.close();
 				writer.close();
+				fstream.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
