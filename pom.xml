@@ -10,7 +10,7 @@
     <artifactId>KCProtect</artifactId>
     <version>1</version>
     <packaging>jar</packaging>
-    <name>Fyre</name>
+    <name>KCProtect</name>
     <url>https://github.com/OstlerDev/KCProtect</url>
     <repositories>
         <repository>
