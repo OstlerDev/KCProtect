@@ -69,9 +69,8 @@ public class BlockBreakListener implements Listener {
 		for(File file : files) {
 			String ownerName = file.getName().split("Area.txt")[0];
 			try {
-				FileInputStream fin = new FileInputStream(file);
-				DataInputStream din = new DataInputStream(fin);
-				BufferedReader reader = new BufferedReader(new InputStreamReader(din));
+				try(FileInputStream fin = new FileInputStream(file); DataInputStream din = new DataInputStream(fin); BufferedReader reader = new BufferedReader(new InputStreamReader(din)))
+				{
 				String line;
 				data.clear();
 				map.clear();
@@ -82,9 +81,7 @@ public class BlockBreakListener implements Listener {
 				y = Integer.parseInt(data.toString().split(",")[1]);
 				z = Integer.parseInt(data.toString().split(",")[2]);
 				map.put(ownerName, new Location(currentWorld, x, y, z));
-				reader.close();
-				din.close();
-				fin.close();
+			}
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {
@@ -103,10 +100,8 @@ public class BlockBreakListener implements Listener {
 
 	public boolean goodBoundaries(double playerX, double playerZ, double x, double z) {
 		int valueX = 0, valueZ = 0;
-		try {
-			FileInputStream fin = new FileInputStream("plugins/KCProtect/config.txt");
-			DataInputStream din = new DataInputStream(fin);
-			BufferedReader reader = new BufferedReader(new InputStreamReader(din));
+		try(FileInputStream fin = new FileInputStream("plugins/KCProtect/config.txt"); DataInputStream din = new DataInputStream(fin); BufferedReader reader = new BufferedReader(new InputStreamReader(din)))
+		{
 			String line;
 			while((line = reader.readLine()) != null) {
 				if(line.contains("valueX=")){
@@ -114,7 +109,8 @@ public class BlockBreakListener implements Listener {
 					valueZ = Integer.parseInt(line.split("valueZ=")[1]);
 				}
 			}
-		} catch (FileNotFoundException e) {
+		}
+		 catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();

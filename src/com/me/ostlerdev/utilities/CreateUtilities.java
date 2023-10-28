@@ -31,11 +31,10 @@ public class CreateUtilities extends Thread {
 		if(!config.exists()) {
 			try {
 				config.createNewFile();
-				FileWriter fstream = new FileWriter(config);
-				BufferedWriter writer = new BufferedWriter(fstream);
+				try(FileWriter fstream = new FileWriter(config); BufferedWriter writer = new BufferedWriter(fstream))
+				{
 				writer.write("valueX=10\n" + "valueZ=10\n");
-				writer.close();
-				fstream.close();
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -59,13 +58,11 @@ public class CreateUtilities extends Thread {
 				e.printStackTrace();
 			}
 		}
-		try {
-			FileWriter fstream = new FileWriter(file);
-			BufferedWriter writer = new BufferedWriter(fstream);
+		try(FileWriter fstream = new FileWriter(file); BufferedWriter writer = new BufferedWriter(fstream))
+		{
 			writer.write(location.getBlockX() + "," + location.getBlockY() + "," + location.getBlockZ());
-			writer.close();
-			fstream.close();
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
